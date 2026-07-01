@@ -1,0 +1,36 @@
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.star-rating-outer {
+  position: relative;
+  display: inline-block;
+  font-size: 1.125rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+.stars-empty {
+  color: var(--star-empty, #D1D5DB);
+}
+
+.stars-filled {
+  color: var(--star-filled, #F59E0B);
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 100%;
+}
+
+.rating-number {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-left: 2px;
+}

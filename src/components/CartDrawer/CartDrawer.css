@@ -1,0 +1,231 @@
+.cart-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--overlay);
+  backdrop-filter: var(--glass-blur);
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-drawer {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: var(--bg-elevated);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  animation: slideInRight var(--transition-fast) forwards;
+}
+
+.cart-drawer-header {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-drawer-header h3 {
+  font-size: 1.125rem;
+}
+
+.close-btn {
+  color: var(--text-secondary);
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.close-btn:hover {
+  background-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+.cart-drawer-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.empty-cart-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  height: 100%;
+  color: var(--text-muted);
+}
+
+.empty-cart-icon {
+  color: var(--text-muted);
+}
+
+.shop-now-btn {
+  background-color: var(--accent);
+  color: var(--text-inverse);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 8px 16px;
+  border-radius: var(--btn-radius);
+}
+
+.cart-drawer-item {
+  display: flex;
+  gap: var(--space-sm);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--card-radius);
+  padding: var(--space-sm);
+  position: relative;
+}
+
+.item-thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.item-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-right: 20px;
+}
+
+.item-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.item-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.quantity-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--bg-input);
+}
+
+.quantity-stepper button {
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.quantity-stepper button:hover {
+  color: var(--accent);
+}
+
+.quantity-stepper span {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.item-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.remove-item-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--text-muted);
+  padding: 4px;
+  border-radius: 40%;
+  transition: color var(--transition-fast);
+}
+
+.remove-item-btn:hover {
+  color: var(--danger);
+}
+
+.cart-drawer-footer {
+  padding: var(--space-md);
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.total-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.shipping-notice {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.view-cart-btn, .checkout-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--btn-radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.view-cart-btn {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  transition: background-color var(--transition-fast);
+}
+
+.view-cart-btn:hover {
+  background-color: var(--border-hover);
+}
+
+.checkout-btn {
+  background-color: var(--accent);
+  color: var(--text-inverse);
+  transition: background-color var(--transition-fast);
+}
+
+.checkout-btn:hover {
+  background-color: var(--accent-hover);
+}

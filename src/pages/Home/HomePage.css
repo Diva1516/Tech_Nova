@@ -1,0 +1,147 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.header-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.deal-icon {
+  color: var(--danger);
+  animation: pulse 1.5s infinite;
+}
+
+.countdown-timer {
+  font-family: var(--font-heading);
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--danger);
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.view-all-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Deals grid */
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.deal-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.deal-progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 var(--space-xs);
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: var(--star-empty);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--danger);
+  border-radius: 3px;
+}
+
+.sold-label {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Trust badges */
+.trust-badges-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.trust-badge svg {
+  color: var(--accent);
+}
+
+.trust-badge h3 {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.trust-badge p {
+  font-size: 0.8125rem;
+}
+
+/* Products Grid Layout */
+.products-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+  .deals-grid, .products-grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .deals-grid, .products-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-badges-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .deals-grid, .products-grid-layout {
+    grid-template-columns: 1fr;
+  }
+}

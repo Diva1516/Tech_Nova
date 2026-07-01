@@ -1,0 +1,119 @@
+/* ============================================
+   TechNova — Utility Classes
+   ============================================ */
+
+/* Display */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+.d-inline-flex { display: inline-flex; }
+
+/* Flex */
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-1 { flex: 1; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/* Text Align */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Width */
+.w-full { width: 100%; }
+.max-w-screen { max-width: var(--max-width); margin-left: auto; margin-right: auto; }
+
+/* Cursor */
+.cursor-pointer { cursor: pointer; }
+.cursor-not-allowed { cursor: not-allowed; }
+
+/* User Select */
+.select-none { user-select: none; }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-x-auto { overflow-x: auto; }
+
+/* Position */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* Visibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-light);
+  color: var(--text-primary);
+}
+
+/* Responsive hide */
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop { display: none !important; }
+}
+
+@media (max-width: 1024px) {
+  .hide-tablet { display: none !important; }
+}

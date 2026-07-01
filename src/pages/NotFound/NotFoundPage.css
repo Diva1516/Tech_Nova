@@ -1,0 +1,26 @@
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-4xl) 0;
+  text-align: center;
+}
+
+.not-found-icon {
+  color: var(--text-muted);
+}
+
+.back-home-btn {
+  background-color: var(--accent);
+  color: var(--text-inverse);
+  padding: 10px 20px;
+  border-radius: var(--btn-radius);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.back-home-btn:hover {
+  background-color: var(--accent-hover);
+}

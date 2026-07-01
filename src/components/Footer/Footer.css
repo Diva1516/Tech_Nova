@@ -1,0 +1,108 @@
+.footer {
+  background: linear-gradient(270deg, #006064, #00838F, #004D40, #006064);
+  background-size: 400% 400%;
+  animation: gradient-sweep 15s ease infinite;
+  border-top: 1px solid var(--border);
+  padding: var(--space-2xl) 0 0;
+  margin-top: auto;
+  color: #FFFFFF;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.footer-brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.footer-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.footer-links-col h4 {
+  color: #FFFFFF;
+  margin-bottom: var(--space-md);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.footer-links-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-links-col a {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color var(--transition-fast);
+}
+
+.footer-links-col a:hover {
+  color: var(--accent);
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: var(--space-md) 0;
+  background-color: rgba(0, 0, 0, 0.15); /* Slight separation overlay */
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}

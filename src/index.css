@@ -1,0 +1,13 @@
+/* TechNova — Root CSS Entry */
+@import './styles/variables.css';
+@import './styles/reset.css';
+@import './styles/typography.css';
+@import './styles/animations.css';
+@import './styles/utilities.css';
+
+/* Root element */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
