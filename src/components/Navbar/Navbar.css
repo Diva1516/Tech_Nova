@@ -48,6 +48,9 @@
   transition: transform 0.2s ease;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-right: 2px;
 }
 
 .brand-text::after {
@@ -424,11 +427,7 @@
 
 @media (max-width: 480px) {
   .nav-brand {
-    font-size: 1rem;
-  }
-
-  .brand-text {
-    display: none;
+    font-size: 1.1rem;
   }
 }
 
