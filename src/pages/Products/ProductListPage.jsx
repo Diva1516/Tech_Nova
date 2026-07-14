@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import productService from '../../services/productService';
+import { products as allProductsData } from '../../data/products';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import { SlidersHorizontal, ArrowUpDown, X } from 'lucide-react';
 import './Products.css';
@@ -17,13 +18,18 @@ export const ProductListPage = () => {
   const [sortBy, setSortBy] = useState('rating');
   const [showFiltersMobile, setShowFiltersMobile] = useState(false);
 
-  // Available brands to check
-  const availableBrands = ['Apple', 'Samsung', 'Sony', 'Dell', 'Canon', 'JBL', 'Nintendo', 'Anker'];
+  // Available brands — dynamically derived from all products
+  const availableBrands = useMemo(() => 
+    [...new Set(allProductsData.map(p => p.brand))].sort(), 
+    []
+  );
 
   // Sync state with url params
   useEffect(() => {
     setCategory(searchParams.get('category') || 'all');
     setSearchQuery(searchParams.get('search') || '');
+    const brandsParam = searchParams.get('brands');
+    setSelectedBrands(brandsParam ? brandsParam.split(',') : []);
   }, [searchParams]);
 
   // Load products based on query/filters
@@ -43,15 +49,20 @@ export const ProductListPage = () => {
   }, [category, searchQuery, selectedBrands, sortBy]);
 
   const handleBrandChange = (brand) => {
-    setSelectedBrands((prev) =>
-      prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand]
-    );
+    const nextBrands = selectedBrands.includes(brand)
+      ? selectedBrands.filter((b) => b !== brand)
+      : [...selectedBrands, brand];
+    
+    const params = {};
+    if (category !== 'all') params.category = category;
+    if (searchQuery) params.search = searchQuery;
+    if (nextBrands.length > 0) params.brands = nextBrands.join(',');
+    setSearchParams(params);
   };
 
   const handleClearFilters = () => {
-    setSelectedBrands([]);
-    setSortBy('rating');
     setSearchParams({});
+    setSortBy('rating');
   };
 
   return (
@@ -103,7 +114,11 @@ export const ProductListPage = () => {
                 <button
                   key={cat}
                   onClick={() => {
-                    setSearchParams(cat === 'all' ? {} : { category: cat });
+                    const params = {};
+                    if (cat !== 'all') params.category = cat;
+                    if (searchQuery) params.search = searchQuery;
+                    if (selectedBrands.length > 0) params.brands = selectedBrands.join(',');
+                    setSearchParams(params);
                     setShowFiltersMobile(false);
                   }}
                   className={`category-link-btn ${category === cat ? 'active' : ''}`}
