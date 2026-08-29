@@ -1,75 +1,65 @@
-# ⚡ TechNova — Premium Tech E-Commerce Application
+<div align="center">
+  <h1>TechNova 🚀</h1>
+  <p><strong>A Premium, High-Performance E-Commerce Single Page Application</strong></p>
+  
+  [![Live Demo](https://img.shields.io/badge/Live_Demo-View_Site-success?style=for-the-badge&logo=google-chrome)](https://diva1516.github.io/Tech_Nova/)
+  [![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)]()
+  [![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite&logoColor=white)]()
+  [![Netlify](https://img.shields.io/badge/Deployed-GitHub_Pages-2088FF?style=for-the-badge&logo=github)]()
+</div>
 
-**TechNova** is a modern, high-fidelity, industry-style React e-commerce application designed for next-generation electronics shopping. It is styled with premium aesthetics (dark/light themes, smooth transitions, organic fluid gradients, and solid animated vector silhouettes) and fully optimized for responsiveness across desktops, laptops, tablets, and smartphones.
+## 📖 Overview
+TechNova is a modern, fully responsive e-commerce web application built from the ground up using **React 18** and **Vite**. It features a custom-built "glassmorphism" design system, complex global state management using the React Context API, and dynamic URL synchronization for advanced product filtering.
 
----
+## ✨ Key Features
+- **🛍️ Advanced State Management:** Global synchronization of Shopping Cart, Wishlist, and User Authentication without prop-drilling, utilizing customized Context APIs.
+- **🔗 Deep-Link Filtering:** Product categories, search queries, and active filters are dynamically synchronized with URL parameters for shareable states.
+- **🎨 Premium UI/UX:** Custom CSS3 architecture featuring a dark-themed glassmorphism aesthetic, smooth micro-interactions, and 100% mobile-first responsiveness.
+- **⚡ Blazing Fast Routing:** Client-side routing powered by React Router v6, optimized for zero page reloads and smooth transitions.
+- **🔒 Simulated Authentication:** Role-based access control protecting user profile and checkout routes.
 
-## 🚀 Key Features
+## 📸 Previews
+<div align="center">
+  <img src="ss/LinkedIn_Collage.jpeg" alt="TechNova Application Previews" width="800"/>
+</div>
 
-* 🛒 **Dynamic Variant-Based Pricing**: Prices and struck-through original labels recalculate in real-time as users select different variants (e.g., storage capacity: 128GB, 256GB, 512GB, 1TB; camera kits; or smartwatch band sizes).
-* 🌓 **Working Theme Toggle**: Seamlessly transitions between Light Mode (clean light grey background, white cards, dark aqua accents) and Dark Mode (dark grey/slate background, slate card shells, and dark aqua header gradients).
-* 🌠 **Animated Auth Panels**: A custom split-screen Login/Register page featuring solid device silhouettes floating in a green-to-cyan neon glowing aura, complete with twinkling stars and a vertical laser scanner effect.
-* ⭐ **Cross-Browser Star Rating System**: Bulletproof overlay-based fractional star rating component (cropping filled star masks to the exact decimal value, e.g., 4.6), preventing browser rendering errors.
-* ⬆️ **Smooth Go-To-Top Scrolling**: Sticky floating action button in the bottom-right that appears on scroll down, allowing users to scroll back to the top with a single click.
-* 📦 **Comprehensive Product Catalog**: Preloaded with 30 detailed tech items representing Mobiles, Laptops, Audio Gear, Cameras, Smartwatches, Gaming, TVs, and Accessories with realistic specs and Indian Rupee (₹) prices.
-
----
+### Conceptual Architecture
+<div align="center">
+  <img src="ss/LinkedIn_5_React_Components.jpg" alt="React Component Architecture" width="400"/>
+  <img src="ss/LinkedIn_1_Coding_Perspective.jpg" alt="Frontend Code Perspective" width="400"/>
+</div>
 
 ## 🛠️ Tech Stack
+- **Frontend Framework:** React.js (v18)
+- **Build Tool:** Vite
+- **Routing:** React Router DOM (v6)
+- **Styling:** Vanilla CSS3 (Custom Variables, CSS Grid/Flexbox)
+- **Icons:** Lucide React
+- **Deployment:** GitHub Pages (Automated CI/CD via GitHub Actions)
 
-* **Core**: React 18, React Router v6, Axios
-* **Styling**: Pure CSS (using CSS Custom Properties for theme variables)
-* **Iconography**: Lucide React
-* **Build System**: Vite (lightning-fast HMR and building)
+## 🚀 Getting Started
 
----
+To run this project locally, follow these steps:
 
-## ⚙️ Local Setup and Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Diva1516/Tech_Nova.git
+   ```
+2. **Navigate to the directory**
+   ```bash
+   cd Tech_Nova
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-### 1. Prerequisites
-Ensure you have [Node.js](https://nodejs.org/) installed (v16+ recommended).
-
-### 2. Install Dependencies
-Clone the repository and run:
-```bash
-npm install
-```
-
-### 3. Run Development Server
-Start the local server with hot reloading enabled:
-```bash
-npm run dev
-```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the store.
-
-### 4. Build for Production
-To package the app for production deployment (output will compile inside the `/dist` directory):
-```bash
-npm run build
-```
-
----
-
-## 📂 Project Structure
-
-```text
-src/
-├── components/       # Reusable components (Logo, Navbar, Footer, StarRating, ScrollToTop)
-├── config/           # Routes and application configurations
-├── data/             # Mock datasets (products, deals, coupons)
-├── hooks/            # Custom React hooks (useCart, useWishlist, useTheme, useAuth)
-├── layouts/          # Main application layout structure
-├── pages/            # Page templates (Auth, Products, Cart, Wishlist, Checkout)
-├── services/         # Mock services and data APIs
-├── styles/           # Global styles and variable declarations
-└── utils/            # Helper utils and formatting constants
-```
-
----
-
-## 👥 Contact Details
-
-* **Developer**: Divakaran
-* **Location**: Bengaluru, Karnataka, India
-* **Email**: [divakaran45162004@gmail.com](mailto:divakaran45162004@gmail.com)
-* **Phone**: +91 93602 00676
+## 👨‍💻 Author
+**Divakaran G**
+- 💼 [LinkedIn](https://linkedin.com/in/divakaran11)
+- 🌐 [Portfolio](https://divakaran-g-portfolio.netlify.app)
+- 🐙 [GitHub](https://github.com/Diva1516)
