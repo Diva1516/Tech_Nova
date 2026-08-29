@@ -38,7 +38,7 @@ export const App = () => {
         <AuthProvider>
           <CartProvider>
             <WishlistProvider>
-              <BrowserRouter>
+              <BrowserRouter basename="/Tech_Nova">
                 <Routes>
                   {/* Auth routes */}
                   <Route path={ROUTES.LOGIN} element={<LoginPage />} />
